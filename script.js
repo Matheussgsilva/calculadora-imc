@@ -5,7 +5,7 @@ function calculate() {
     const gender = document.getElementById("gender").value
     const activity = Number(document.getElementById("activity-level").value)
 
-    const imc = (weight/(height*height)).toFixed(2)
+    const imc = (weight/((height/100)*(height/100))).toFixed(2)
     const tmbFemale = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age)
     const tmbMale = 66 + (13.7 * weight) + (5 * height) - (6.8 * age)
     
