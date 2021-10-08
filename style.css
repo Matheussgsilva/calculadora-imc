@@ -88,4 +88,14 @@ h2 {
     background: #1A1A1A;
     border-radius: 5px;
     padding: 15px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .result-content h3, p {
+      margin-bottom: 10px;
+  }
+
+  .result-content strong {
+      color: #FF7373;
   }
