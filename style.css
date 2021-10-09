@@ -17,10 +17,11 @@ body {
 }
 
 .container {
-    width: 500px;
+    max-width: 550px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
+    padding: 0px 30px;
 }
 
 header {
