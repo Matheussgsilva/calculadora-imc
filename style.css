@@ -32,6 +32,7 @@ h1 {
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #FF7373;
 }
 
 h2 {
@@ -81,6 +82,11 @@ h2 {
     font-size: 18px;
     font-family: 'Montserrat Bold', sans-serif;
     cursor: pointer;
+    transition: transform 600ms;
+}
+
+.form-group:hover {
+    transform: scale(1.012);
 }
 
 .result-content {
