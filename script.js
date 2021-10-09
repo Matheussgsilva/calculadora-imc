@@ -9,22 +9,36 @@ function calculate() {
     const tmbFemale = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age)
     const tmbMale = 66 + (13.7 * weight) + (5 * height) - (6.8 * age)
     
+    let imcresult = ""
+    if (imc < 18.5) {
+            imcresult = "Magreza"
+    } else if (imc < 25) {
+            imcresult = "Normal"
+    } else if (imc < 30) {
+            imcresult = "Sobrepeso"
+    } else if (imc < 40) {
+            imcresult = "Obesidade"
+    } else {
+            imcresult = "Obesidade mórbida"
+    }
+    
     if (gender == 0 || age == 0 || weight == 0 || height == 0 || activity == 0) {
         window.alert("Insira todos os valores antes de calcular")
     } else if (gender == "female") {
-        tmbResult(tmbFemale, imc, activity)
+        tmbResult(tmbFemale, imc, activity, imcresult)
     } else {
-        tmbResult(tmbMale, imc, activity)
+        tmbResult(tmbMale, imc, activity, imcresult)
     }
 }
 
 
-function tmbResult(value, imc, activity) {
+function tmbResult(value, imc, activity, imcresult) {
     const result = document.querySelector(".result-content")
 
     result.innerHTML = /*html*/ `
         <h3>Aqui está o seu resultado:</h3>  
-        <p>Seu IMC é <strong>${imc}</strong></p>  
+        <p>Seu IMC é <strong>${imc}</strong></p> 
+        <p>Sua classificação é de <strong>${imcresult}</strong>
         <p>Seu metabolismo basal é de <strong>${Math.round(value)} calorias</strong>.</p>
         <p>Para manter o seu peso você precisa consumir em média <strong>${Math.round(value*activity)} calorias</strong>.</p>
         <p>Para perder peso você precisa consumir em média <strong>${Math.round(value*activity-450)} calorias</strong>.</p>
