@@ -4,6 +4,9 @@ function calculate() {
     const height = parseFloat(document.getElementById("height").value)
     const gender = document.getElementById("gender").value
     const activity = Number(document.getElementById("activity-level").value)
+    let wait = document.getElementById("wait")
+
+    wait.innerHTML = ""
 
     const imc = (weight/((height/100)*(height/100))).toFixed(2)
     const tmbFemale = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age)
@@ -34,7 +37,7 @@ function calculate() {
 
 function tmbResult(value, imc, activity, imcresult) {
     const result = document.querySelector(".result-content")
-
+    
     result.insertAdjacentHTML("afterbegin", /*html*/ `
         <h3>Aqui está o seu resultado:</h3>  
         <p>Seu IMC é <strong>${imc}</strong></p> 
