@@ -35,7 +35,7 @@ function calculate() {
 function tmbResult(value, imc, activity, imcresult) {
     const result = document.querySelector(".result-content")
 
-    result.innerHTML = /*html*/ `
+    result.insertAdjacentHTML("afterbegin", /*html*/ `
         <h3>Aqui está o seu resultado:</h3>  
         <p>Seu IMC é <strong>${imc}</strong></p> 
         <p>Sua classificação é de <strong>${imcresult}</strong>
@@ -43,6 +43,5 @@ function tmbResult(value, imc, activity, imcresult) {
         <p>Para manter o seu peso você precisa consumir em média <strong>${Math.round(value*activity)} calorias</strong>.</p>
         <p>Para perder peso você precisa consumir em média <strong>${Math.round(value*activity-450)} calorias</strong>.</p>
         <p>Para ganhar peso você precisa consumir em média <strong>${Math.round(value*activity+450)} calorias</strong>.</p>
-    `
-
+    `)
 }
