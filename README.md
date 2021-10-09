@@ -4,6 +4,9 @@
 
 Linguagens:
 
--HTML
--CSS
--JavaScript
+- HTML
+- CSS
+- JavaScript:
+    - uso de condicionais
+    - uso de parâmetros em função
+    - DOM
