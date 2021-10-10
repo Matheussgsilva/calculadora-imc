@@ -1,13 +1,11 @@
 function calculate() {
     const age = Number(document.getElementById("age").value)
-    const weight = parseFloat(document.getElementById("weight").value)
-    const height = parseFloat(document.getElementById("height").value)
+    const weight = Number(document.getElementById("weight").value)
+    const height = Number(document.getElementById("height").value)
     const gender = document.getElementById("gender").value
     const activity = Number(document.getElementById("activity-level").value)
     let wait = document.getElementById("wait")
     let alert = document.getElementById("alert")
-
-    wait.innerHTML = ""
 
     const imc = (weight/((height/100)*(height/100))).toFixed(2)
     const tmbFemale = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age)
@@ -27,19 +25,24 @@ function calculate() {
     }
     
     if (gender == 0 || age == 0 || weight == 0 || height == 0 || activity == 0) {
+        alert.innerHTML = ""
         alert.insertAdjacentHTML("afterbegin", "<p><strong>* Insira todos os valores antes de calcular</strong></p>")
     } else if (gender == "female") {
         tmbResult(tmbFemale, imc, activity, imcresult)
         alert.innerHTML = ""
+        clearInput()
     } else {
         tmbResult(tmbMale, imc, activity, imcresult)
         alert.innerHTML = ""
+        clearInput()
     }
 }
 
 
 function tmbResult(value, imc, activity, imcresult) {
     const result = document.querySelector(".result-content")
+
+    wait.innerHTML = ""
     
     result.insertAdjacentHTML("afterbegin", /*html*/ `
         <h3>Aqui está o seu resultado:</h3>  
@@ -50,4 +53,12 @@ function tmbResult(value, imc, activity, imcresult) {
         <p>Para perder peso você precisa consumir em média <strong>${Math.round(value*activity-450)} calorias</strong>.</p>
         <p>Para ganhar peso você precisa consumir em média <strong>${Math.round(value*activity+450)} calorias</strong>.</p>
     `)
+}
+
+function clearInput() {
+    age.value = ""
+    weight.value = ""
+    height.value = ""
+    gender.value = 0
+    activity.value = 0
 }
