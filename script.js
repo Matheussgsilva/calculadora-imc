@@ -5,6 +5,7 @@ function calculate() {
     const gender = document.getElementById("gender").value
     const activity = Number(document.getElementById("activity-level").value)
     let wait = document.getElementById("wait")
+    let alert = document.getElementById("alert")
 
     wait.innerHTML = ""
 
@@ -14,7 +15,7 @@ function calculate() {
     
     let imcresult = ""
     if (imc < 18.5) {
-            imcresult = "Magreza"
+            imcresult = "Abaixo do peso"
     } else if (imc < 25) {
             imcresult = "Normal"
     } else if (imc < 30) {
@@ -26,11 +27,13 @@ function calculate() {
     }
     
     if (gender == 0 || age == 0 || weight == 0 || height == 0 || activity == 0) {
-        window.alert("Insira todos os valores antes de calcular")
+        alert.insertAdjacentHTML("afterbegin", "<p><strong>* Insira todos os valores antes de calcular</strong></p>")
     } else if (gender == "female") {
         tmbResult(tmbFemale, imc, activity, imcresult)
+        alert.innerHTML = ""
     } else {
         tmbResult(tmbMale, imc, activity, imcresult)
+        alert.innerHTML = ""
     }
 }
 
