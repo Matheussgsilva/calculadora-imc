@@ -30,19 +30,20 @@ function calculate() {
     } else if (gender == "female") {
         tmbResult(tmbFemale, imc, activity, imcresult)
         alert.innerHTML = ""
-        clearInput()
     } else {
         tmbResult(tmbMale, imc, activity, imcresult)
         alert.innerHTML = ""
-        clearInput()
     }
 }
 
-
 function tmbResult(value, imc, activity, imcresult) {
     const result = document.querySelector(".result-content")
+    const formBtn = document.getElementById("form-btn")
 
     wait.innerHTML = ""
+    formBtn.innerHTML = ""
+
+    formBtn.insertAdjacentHTML("afterbegin", "<button id='form-btn' type='button' onClick='clearInput()'>Limpar</button>")
     
     result.insertAdjacentHTML("afterbegin", /*html*/ `
         <h3>Aqui está o seu resultado:</h3>  
@@ -56,6 +57,15 @@ function tmbResult(value, imc, activity, imcresult) {
 }
 
 function clearInput() {
+    const result = document.querySelector(".result-content")
+    const formBtn = document.getElementById("form-btn")
+
+    result.innerHTML = ""
+    formBtn.innerHTML = ""
+
+    formBtn.insertAdjacentHTML("afterbegin", "<button id='form-btn' type='button' onClick='calculate()'>Calcular</button>")
+    result.insertAdjacentHTML("afterbegin", "<p id='wait'>Aguardando dados...</p>")
+
     age.value = ""
     weight.value = ""
     height.value = ""
