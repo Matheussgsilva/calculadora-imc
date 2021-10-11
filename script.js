@@ -59,6 +59,7 @@ function tmbResult(value, imc, activity, imcresult) {
 function clearInput() {
     const result = document.querySelector(".result-content")
     const formBtn = document.getElementById("form-btn")
+    const activity = document.getElementById("activity-level")
 
     result.innerHTML = ""
     formBtn.innerHTML = ""
