@@ -113,4 +113,23 @@ h2 {
 
 strong {
       color: #FF7373;
-  }
+}
+
+#git-link {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+#git-link a {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#git-img {
+    width: 20px;
+    margin-right: 5px;
+}

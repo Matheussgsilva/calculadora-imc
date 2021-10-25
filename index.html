@@ -18,45 +18,50 @@
         </header>
         <main>
             <div id="alert"></div>
-                <div class="form-group">
-                    <label for="gender">Sexo</label>
-                    <select name="gender" id="gender">
-                        <option value="0">Escolha uma opção</option>
-                        <option value="male">Masculino</option>
-                        <option value="female">Feminino</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="age">Idade</label>
-                    <input type="number" name="age" id="age" placeholder="Insira a sua idade">
-                </div>
-                <div class="form-group">
-                    <label for="weight">Peso</label>
-                    <input type="number" name="weight" id="weight" placeholder="Insira o seu peso">
-                </div>
-                <div class="form-group">
-                    <label for="height">Altura</label>
-                    <input type="number" name="height" id="height" placeholder="Insira a sua altura em centímetros" onkeypress="return event.charCode >= 48" min="1">
-                </div>
-                <div class="form-group">
-                    <label for="activity-level">Nível de atividade</label>
-                    <select name="activity-level" id="activity-level">
-                        <option value="0">Escolha uma opção</option>
-                        <option value="1.2">Sedentário</option>
-                        <option value="1.375">Pouca atividade</option>
-                        <option value="1.55">Atividade moderada</option>
-                        <option value="1.725">Atividade intensa</option>
-                        <option value="1.9">Atividade muito intensa</option>
-                    </select>
-                </div>
-                <div class="form-group" id="form-btn">
-                    <button id="form-btn" type="button" onClick="calculate()">Calcular</button>
-                </div>
+            <div class="form-group">
+                <label for="gender">Sexo</label>
+                <select name="gender" id="gender">
+                    <option value="0">Escolha uma opção</option>
+                    <option value="male">Masculino</option>
+                    <option value="female">Feminino</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="age">Idade</label>
+                <input type="number" name="age" id="age" placeholder="Insira a sua idade">
+            </div>
+            <div class="form-group">
+                <label for="weight">Peso</label>
+                <input type="number" name="weight" id="weight" placeholder="Insira o seu peso">
+            </div>
+            <div class="form-group">
+                <label for="height">Altura</label>
+                <input type="number" name="height" id="height" placeholder="Insira a sua altura em centímetros" onkeypress="return event.charCode >= 48" min="1">
+            </div>
+            <div class="form-group">
+                <label for="activity-level">Nível de atividade</label>
+                <select name="activity-level" id="activity-level">
+                    <option value="0">Escolha uma opção</option>
+                    <option value="1.2">Sedentário</option>
+                    <option value="1.375">Pouca atividade</option>
+                    <option value="1.55">Atividade moderada</option>
+                    <option value="1.725">Atividade intensa</option>
+                    <option value="1.9">Atividade muito intensa</option>
+                </select>
+            </div>
+            <div class="form-group" id="form-btn">
+                <button id="form-btn" type="button" onClick="calculate()">Calcular</button>
+            </div>
             
             <div class="result-content">
                 <p id="wait">Aguardando dados...</p>
             </div>
         </main>
+        <div id="git-link">
+            <a href="https://github.com/Matheussgsilva/calculadora-imc" target="_blank">
+            <img id="git-img" src="images/github.png" alt="Logo do GitHub"> Acesse o repositório do projeto no GitHub
+            </a>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
