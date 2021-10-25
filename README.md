@@ -1,9 +1,9 @@
 # :construction: Projeto de Estudo:
 
-## :muscle: Calculadora de IMC e taxa basal de calorias.
+## :muscle: Calculadora de IMC e taxa de metabolismo basal.
 
 ## :computer: Sobre:
-Projeto criado para cacular o IMC e o Metabolismo Basal através dos inseridos pelo usuário
+Projeto criado para calcular o IMC e o Metabolismo Basal através dos dados inseridos pelo usuário
 
 ## Linguagens utilizadas:
 <div style="display: inline_block"><br>
